@@ -17,7 +17,7 @@ public class ItemUpdateTest {
     public void updateTest() throws Exception {
         Book book = em.find(Book.class, 1L);
 
-        book.setName("sdfsdf");
+        book.setName("JPA");
 
 
     }

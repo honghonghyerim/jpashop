@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
-@RequiredArgsConstructor
+@RequiredArgsConstructor //final 변수만 생성자 만들어줌
 public class Memberservice {
 
     private final MemberRepository memberRepository;
@@ -23,6 +23,7 @@ public class Memberservice {
         return member.getId();
     }
 
+    //회원 중복검사 메서드
     private void  validateDuplicateMember (Member member) {
         List<Member> findMembers = memberRepository.findByName(member.getName());
         if (!findMembers.isEmpty()) {

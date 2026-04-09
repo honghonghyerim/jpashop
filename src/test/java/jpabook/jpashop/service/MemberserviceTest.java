@@ -41,6 +41,7 @@ class MemberserviceTest {
 
         memberservice.join(member1);
 
+        //잘못된 입력이 들어왔을 때 에러를 잘 던지는지 확인하는 매서드
         assertThrows(IllegalStateException.class, () -> memberservice.join(member2));
 
     }

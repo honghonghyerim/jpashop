@@ -39,7 +39,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private  OrderStatus status; //주문상태
 
-    //연관관계 메서드
+    //연관관계 메서드 --> 이메서드를 사용할때마다 나와 내연관관계까지같이 쓰기위해 만든 메서드 (연관관계일때)
     public void  setMember(Member member) {
         this.member = member;
         member.getOrders().add(this);

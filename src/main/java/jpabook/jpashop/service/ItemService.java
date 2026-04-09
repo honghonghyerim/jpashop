@@ -23,7 +23,7 @@ public class ItemService {
 
     @Transactional
     public void updateItem(Long itemId, Book param) {
-        Item findItem = itemRepository.findOne(itemId);
+        Item findItem = itemRepository.findOne(itemId); //영속상태
         findItem.setPrice(param.getPrice());
         findItem.setName(param.getName());
         findItem.setStockQuantity(param.getStockQuantity());
